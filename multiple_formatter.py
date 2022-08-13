@@ -22,12 +22,6 @@ def getArguments():
     parser = ArgumentParser()
     parser.add_argument(
         '--files', help='Write the file paths separated by commas.')
-    parser.add_argument(
-        '--example', help='Example, python multiple_formatter.py --files C:\Myfiles\myfile1.sql,C:\Myfiles2\myfiles\myfiles5.sql'
-    )
-    parser.add_argument(
-        '--admin', help='Run the file with admin privileges. Give 1'
-    )
     return parser.parse_args()
 
 
