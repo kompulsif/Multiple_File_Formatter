@@ -51,12 +51,14 @@ def fileExistsControl(files):
     for f in files:
         if (not exists(f)):
             print(f'\n[!]->{f} IS NOT EXISTS!<-[!]\n')
+            input("Enter to exit: ")
             quit()
 
         else:
             ex = f[f.rindex('.'):]
             if (ex not in FILE_EXTENSIONS):
                 print('\n[!]-> Please check your files extensions <-[!]\n')
+                input("Enter to exit: ")
                 quit()
 
             all_files[f] = ex
@@ -71,6 +73,7 @@ def fileAccessControl(files):
 
     except (PermissionError, IOError):
         print('[!]-> Permission Error, please try again with admin privileges <-[!]')
+        input("Enter to exit: ")
         quit()
 
 
@@ -86,6 +89,7 @@ def main():
 
     else:
         print("[*]-> Please try the --help parameter <-[*]")
+        input("Enter to exit: ")
 
 
 if (__name__ == '__main__'):
